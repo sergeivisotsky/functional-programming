@@ -54,5 +54,14 @@ public class PerfectNumberTest {
         assertArrayEquals(expected, PerfectNumber.divisors(n).toArray());
     }
 
+    /**
+     * Another part of the task {@link PerfectNumber#process(int)}
+     */
+    @Test
+    public void detect() {
+        assertEquals(PERFECT, PerfectNumber.detect(28));
+        assertEquals(DEFICIENT, PerfectNumber.detect(1));
+        assertEquals(ABUNDANT, PerfectNumber.detect(24));
+    }
 
 }
