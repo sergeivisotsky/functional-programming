@@ -22,13 +22,7 @@ public class PerfectNumber {
                 .range(1, i)
                 .filter(j -> i % j == 0)
                 .sum();
-        if (sum == i) {
-            return STATE.PERFECT;
-        } else if (sum < 21) {
-            return STATE.DEFICIENT;
-        } else {
-            return STATE.ABUNDANT;
-        }
+        return sum == i ? STATE.PERFECT : sum < i ? STATE.DEFICIENT : STATE.ABUNDANT;
     }
 
     public static Set<Integer> divisors(int n) {
