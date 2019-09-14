@@ -64,4 +64,14 @@ public class PerfectNumberTest {
         assertEquals(ABUNDANT, PerfectNumber.detect(24));
     }
 
+    /**
+     * Test for one more part of the task 1-2 {@link PerfectNumber#divisorsSqrt(int)}
+     */
+    @Test
+    public void divisorsSqrt() {
+        Object[] expected = new Integer[]{1, 2};
+        int n = 8;
+        assertArrayEquals(expected, PerfectNumber.divisorsSqrt(n).toArray());
+    }
+
 }

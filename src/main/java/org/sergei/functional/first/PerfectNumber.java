@@ -32,4 +32,15 @@ public class PerfectNumber {
                 .boxed()
                 .collect(Collectors.toCollection(HashSet::new));
     }
+
+    /**
+     * One more part of the task 1-2
+     */
+    public static Set<Integer> divisorsSqrt(int n) {
+        return IntStream
+                .range(1, Math.toIntExact(Math.round(Math.sqrt(n))))
+                .filter(i -> n % i == 0)
+                .boxed()
+                .collect(Collectors.toCollection(HashSet::new));
+    }
 }
