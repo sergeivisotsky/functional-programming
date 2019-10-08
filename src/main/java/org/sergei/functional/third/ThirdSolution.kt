@@ -13,7 +13,7 @@ typealias Set = (Int) -> Boolean
 /**
  * If  a set contains an element.
  */
-infix fun Set.contains(elem: Int): Boolean = true
+infix fun Set.contains(elem: Int): Boolean = invoke(elem)
 
 /**
  * Singleton set from one element
