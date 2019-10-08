@@ -23,7 +23,7 @@ fun singletonSet(elem: Int): Set = { it == elem }
 /**
  * Union of the two sets
  */
-infix fun Set.union(set: Set): Set = set
+infix fun Set.union(set: Set): Set = { invoke(it) or set.invoke(it) }
 
 /**
  * Intersection of the two sets
