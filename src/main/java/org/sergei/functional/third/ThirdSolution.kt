@@ -28,17 +28,17 @@ infix fun Set.union(set: Set): Set = { invoke(it) or set.invoke(it) }
 /**
  * Intersection of the two sets
  */
-infix fun Set.intersect(set: Set): Set = { invoke(it) and set.invoke(it) }
+infix fun Set.intersect(set: Set): Set = { contains(it) and set.contains(it) }
 
 /**
  * Difference of two given sets
  */
-infix fun Set.diff(set: Set): Set = TODO()
+infix fun Set.diff(set: Set): Set = { contains(it) and set.contains(it).not() }
 
 /**
  * Filter
  */
-fun Set.filter(predicate: (Int) -> Boolean): Set = TODO()
+fun Set.filter(predicate: (Int) -> Boolean): Set = {contains(it) and predicate(it)}
 
 /** =========== For brave enough =========== */
 
