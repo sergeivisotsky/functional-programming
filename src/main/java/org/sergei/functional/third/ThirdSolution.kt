@@ -28,7 +28,7 @@ infix fun Set.union(set: Set): Set = { invoke(it) or set.invoke(it) }
 /**
  * Intersection of the two sets
  */
-infix fun Set.intersect(set: Set): Set = TODO()
+infix fun Set.intersect(set: Set): Set = { invoke(it) and set.invoke(it) }
 
 /**
  * Difference of two given sets
