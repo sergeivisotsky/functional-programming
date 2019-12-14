@@ -1,4 +1,4 @@
-(use 'clojure.test)
+(use 'clojure.core)
 (require '[clojure.string :as str])
 
 (defn validation [message key]
