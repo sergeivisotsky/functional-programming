@@ -19,7 +19,6 @@
                                      (if (or (= 0 row) (= row (- height 1)))
                                        (def direction-down (not direction-down)))
                                      (def matrix-index (+ (* row width) col))
-                                     ;; (debug-get-fence-matrix row width col matrix-index)
                                      (def row
                                        (if (true? direction-down)
                                          (inc row)
