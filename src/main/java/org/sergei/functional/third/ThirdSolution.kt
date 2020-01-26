@@ -38,7 +38,7 @@ infix fun Set.diff(set: Set): Set = { contains(it) and set.contains(it).not() }
 /**
  * Filter
  */
-fun Set.filter(predicate: (Int) -> Boolean): Set = {contains(it) and predicate(it)}
+fun Set.filter(predicate: (Int) -> Boolean): Set = { contains(it) and predicate(it) }
 
 /** =========== For brave enough =========== */
 
@@ -57,9 +57,9 @@ fun Set.forAll(predicate: (Int) -> Boolean): Boolean {
     return iterate(-BOUND)
 }
 
-infix fun Set.exists(predicate: (Int) -> Boolean): Boolean = TODO()
+infix fun Set.exists(predicate: (Int) -> Boolean): Boolean = !this.forAll(predicate)
 
-fun Set.map(transform: (Int) -> Int): Set = TODO()
+fun Set.map(transform: (Int) -> Int): Set = { it -> this exists { new -> it != transform(new) } }
 
 val Set.contents: String
     get() = TODO()
